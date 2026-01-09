@@ -8,15 +8,17 @@
     color: black;
 }
 
-.image {
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    width: 80%;
+img {
+    display: block;
+    max-width: 100%;
 }
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+
 
 
 body {
@@ -49,8 +51,6 @@ footer {
 }
 
 .teal-bg {
-    margin: 20px auto;
-    width: 80%;
     background-color: #22466c;
     color: white;
     padding: 20px;
@@ -76,13 +76,29 @@ a {
     color: green;
 }
 
-.section img {
-    width: 40%;
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 10px;
 }
 
-.section {
-    display: flex;
-    width: 80%;
-    margin: 20px auto;
-    padding: 0 20px;
+li::marker {
+    content: "🚀";
+}
+
+@media (max-width:768px) {
+    .wrapper {
+        max-width: 768px;
+        padding: 0 20px;
+    }
+
+    .two-column-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+        gap: 10px;
+    }
+
 }
